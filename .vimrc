@@ -18,3 +18,6 @@ exec ":source ".s:pluginDef
 
 " Loads the global config, mapping and settings
 exec ":source ".s:configSettings
+
+" Loads plugins config
+exec ":source ".s:pluginConf
