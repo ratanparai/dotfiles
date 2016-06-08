@@ -33,4 +33,5 @@ set hlsearch
 set incsearch
 
 " copy/pase
-set paste
+" set paste
+set clipboard=unnamed
