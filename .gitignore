@@ -1,0 +1,3 @@
+# exclude downloaded bundle content
+/plugins/bundle
+*.swp
