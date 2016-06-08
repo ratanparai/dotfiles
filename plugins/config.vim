@@ -47,3 +47,7 @@ nnoremap <c-n> :NERDTreeToggle<cr>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'ra'
+
+" [> vim-gitgutter <]
+set updatetime=250
+let g:gitgutter_highlight_lines = 1
