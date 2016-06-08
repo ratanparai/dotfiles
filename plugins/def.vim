@@ -24,6 +24,7 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'scrooloose/syntastic'
 Plugin 'syngan/vim-vimlint'
 Plugin 'ynkdir/vim-vimlparser'
+Plugin 'digitaltoad/vim-pug'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

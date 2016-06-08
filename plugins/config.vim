@@ -66,3 +66,5 @@ let g:syntastic_vim_checkers = ['vimlint']
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
+" install pug-lint from cd using 'npm install -g pug-lint
+let g:syntastic_pug_checkers = ['pug_lint']
