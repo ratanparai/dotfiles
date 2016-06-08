@@ -19,12 +19,11 @@ let g:airline#extensions#tabline#enabled = 1
 let g:solarized_italic=0
 if has('gui_running')
     set background=dark
-    colorscheme solarized 
+    colorscheme solarized
 else
     set background=dark
     colorscheme luna
 endif
-
 
 " [> NERDTree <]
 
@@ -51,3 +50,8 @@ let g:ctrlp_working_path_mode = 'ra'
 " [> vim-gitgutter <]
 set updatetime=250
 " let g:gitgutter_highlight_lines = 1
+
+" [> EditorConfig <]
+
+" to avoid issues with fugitive
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']

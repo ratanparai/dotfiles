@@ -19,6 +19,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'tpope/vim-fugitive'
 
 
 " All of your Plugins must be added before the following line
