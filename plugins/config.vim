@@ -48,6 +48,7 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'ra'
 
 " [> vim-gitgutter <]
+"
 set updatetime=250
 " let g:gitgutter_highlight_lines = 1
 
@@ -55,3 +56,13 @@ set updatetime=250
 
 " to avoid issues with fugitive
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+" [> Syntastic <]
+" Syntax checkers
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_jump = 1
+let g:syntastic_vim_checkers = ['vimlint']
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = 'eslint_d'
+

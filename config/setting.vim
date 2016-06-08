@@ -46,3 +46,7 @@ nmap <leader>l :set list!<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
+
+" change buffer custom shortcut
+nnoremap <Leader>j :bp<CR>
+nnoremap <Leader>k :bn<CR>

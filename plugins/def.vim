@@ -20,7 +20,10 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-fugitive'
-
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'scrooloose/syntastic'
+Plugin 'syngan/vim-vimlint'
+Plugin 'ynkdir/vim-vimlparser'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
