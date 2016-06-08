@@ -6,6 +6,9 @@
 " unicode 
 set encoding=utf-8
 
+" change leader key to comma
+let mapleader=" "
+
 " wrap end of line 
 set wrap
 
