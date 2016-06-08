@@ -50,4 +50,4 @@ let g:ctrlp_working_path_mode = 'ra'
 
 " [> vim-gitgutter <]
 set updatetime=250
-let g:gitgutter_highlight_lines = 1
+" let g:gitgutter_highlight_lines = 1
