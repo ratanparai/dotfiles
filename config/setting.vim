@@ -3,6 +3,8 @@
 " email : ratanparai (at) gmail (dot) com
 " 
 
+" unicode 
+set encoding=utf-8
 
 " wrap end of line 
 set wrap
@@ -35,3 +37,9 @@ set incsearch
 " copy/pase
 " set paste
 set clipboard=unnamed
+
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
+
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
