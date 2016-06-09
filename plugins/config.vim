@@ -13,7 +13,7 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 
 "  powerline font
-" let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts=1
 
 " colorscheme
 let g:solarized_italic=0
@@ -61,7 +61,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 " [> Syntastic <]
 " Syntax checkers
-let g:syntastic_check_on_open=1
+let g:syntastic_check_on_open=0 " diable syntax checking on file open to improve vim loading time
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump = 1
 let g:syntastic_vim_checkers = ['vimlint']

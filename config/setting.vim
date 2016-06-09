@@ -63,3 +63,6 @@ au GUIEnter * simalt ~x
 " set persistant undo
 set undodir=$HOME.'/vimfiles/undo'
 set undofile
+
+" set powerline font for gui
+set guifont=Droid_Sans_Mono_for_Powerline:h10
