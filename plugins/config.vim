@@ -16,7 +16,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts=1
 
 " colorscheme
-let g:solarized_italic=0
+" let g:solarized_italic=0
 if has('gui_running')
     set background=dark
     colorscheme solarized
@@ -24,6 +24,9 @@ else
     set background=dark
     colorscheme luna
 endif
+
+" Highlight trailing whitespace
+let g:solarized_hitrail = 1
 
 " [> NERDTree <]
 
@@ -63,7 +66,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 " Syntax checkers
 let g:syntastic_check_on_open=0 " diable syntax checking on file open to improve vim loading time
 let g:syntastic_enable_signs=1
-let g:syntastic_auto_jump = 1
+let g:syntastic_auto_jump = 0 " diable auto jump to error for better autosave integration
 let g:syntastic_vim_checkers = ['vimlint']
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint_d'
