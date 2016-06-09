@@ -66,3 +66,7 @@ set undofile
 
 " set powerline font for gui
 set guifont=Droid_Sans_Mono_for_Powerline:h10
+
+" turn on omnifunc capability for autocomplete
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
