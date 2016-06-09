@@ -32,6 +32,7 @@ Plugin 'moll/vim-node'
 Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'vim-scripts/vim-auto-save'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

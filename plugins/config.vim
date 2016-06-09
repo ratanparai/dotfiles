@@ -49,8 +49,10 @@ let g:ctrlp_working_path_mode = 'ra'
 
 " [> vim-gitgutter <]
 "
-set updatetime=250
+" set updatetime=250
 " let g:gitgutter_highlight_lines = 1
+let g:gitgutter_realtime=0
+let g:gitgutter_eager=0
 
 " [> EditorConfig <]
 
@@ -83,3 +85,8 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" [> AutoSave plugin >]
+let g:auto_save = 1 " enable autosave
+let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
+" let g:auto_save_postsave_hook = 'TagsGenerate'  " this will run :TagsGenerate after each save
