@@ -34,6 +34,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 " Plugin 'vim-scripts/vim-auto-save'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'lervag/vimtex'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
