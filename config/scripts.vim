@@ -4,7 +4,7 @@
 " Remove trailing spaces
 " And two or more blankline. Only one blank line is acceptable
 if has("autocmd")
-    autocmd BufWritePre *.py,*.js :call <SID>StripTrailingWhitespaces()
+    autocmd BufWritePre *.py,*.js,*.html,*.c,*.cpp :call <SID>StripTrailingWhitespaces()
     autocmd BufWritePre *.js :call <SID>StripTwoOrMoreBlankLine()
 endif
 

@@ -68,3 +68,18 @@ let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
 " install pug-lint from cd using 'npm install -g pug-lint
 let g:syntastic_pug_checkers = ['pug_lint']
+
+" [> UltiSnips <]
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+" directory for my own Snippets
+let g:UltiSnipsSnippetDir=$HOME.'/vimfiles/UltiSnips/'
+
+" [> Omni function test >]
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags

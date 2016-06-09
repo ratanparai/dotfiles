@@ -7,7 +7,7 @@
 set encoding=utf-8
 
 " change leader key to comma
-let mapleader=" "
+let g:mapleader=" "
 
 " wrap end of line
 set wrap
@@ -50,3 +50,16 @@ set listchars=tab:▸\ ,eol:¬
 " change buffer custom shortcut
 nnoremap <Leader>j :bp<CR>
 nnoremap <Leader>k :bn<CR>
+
+" keep 5 line while scrolling
+set scrolloff=5
+
+" Set gui opetion for windows vim gui
+set guioptions-=T "remove toolbar
+
+" Start vim in maximized GUI mode
+au GUIEnter * simalt ~x
+
+" set persistant undo
+set undodir=$HOME.'/vimfiles/undo'
+set undofile

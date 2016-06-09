@@ -25,6 +25,13 @@ Plugin 'scrooloose/syntastic'
 Plugin 'syngan/vim-vimlint'
 Plugin 'ynkdir/vim-vimlparser'
 Plugin 'digitaltoad/vim-pug'
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'tpope/vim-surround'
+Plugin 'ternjs/tern_for_vim'
+Plugin 'moll/vim-node'
+Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
