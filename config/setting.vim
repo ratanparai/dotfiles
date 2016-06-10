@@ -26,10 +26,16 @@ set smartindent
 set autoindent
 set copyindent
 set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 set shiftround
 set backspace=indent,eol,start
 set smarttab
 set expandtab
+
+" save untofile for unlimited undo
+set undodir=.
+set undofile
 
 " search
 set showmatch
@@ -61,7 +67,7 @@ set guioptions-=T "remove toolbar
 au GUIEnter * simalt ~x
 
 " set persistant undo
-set undodir=$HOME.'/vimfiles/undo'
+set undodir=C:\Users\ratanparai\vimfiles\undo
 set undofile
 
 " set powerline font for gui
