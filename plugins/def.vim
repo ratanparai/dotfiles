@@ -35,6 +35,9 @@ Plugin 'honza/vim-snippets'
 " Plugin 'vim-scripts/vim-auto-save'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'lervag/vimtex'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

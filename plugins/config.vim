@@ -3,7 +3,9 @@
 " email  : ratanparai (at) gmail (dot) com
 "
 
-" [> Airline <]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       [> Airline <]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " status line always opened
 " bottom of the window
@@ -28,15 +30,21 @@ endif
 " Highlight trailing whitespace
 let g:solarized_hitrail = 1
 
-" [> NERDTree <]
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                   [> NERDTree <]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" auto start NERDTree when vim start
 " autocmd vimenter * NERDTree
+
+let g:NERDTreeMinimalUI=1
+let g:NERDTreeDirArrows=1
+
 
 " nerdtree window resize
 let g:NERDTreeWinSize = 20
 
 " show hidden files
-let g:NERDTreeShowHidden=1
+" let g:NERDTreeShowHidden=1
 
 " single click to open nodes
 " let g:NERDTreeMouseMode=3
@@ -45,24 +53,32 @@ let g:NERDTreeShowHidden=1
 let g:NERDTreeIgnore=['\.swp$', '\~$']
 nnoremap <c-n> :NERDTreeToggle<cr>
 
-" [> ctrlp.vim <]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       [> ctrlp.vim <]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 " let g:ctrlp_working_path_mode = 'ra'
 
-" [> vim-gitgutter <]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       [> vim-gitgutter <]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 " set updatetime=250
 " let g:gitgutter_highlight_lines = 1
 let g:gitgutter_realtime=0
 let g:gitgutter_eager=0
 
-" [> EditorConfig <]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       [> EditorConfig <]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " to avoid issues with fugitive
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
-" [> Syntastic <]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       [> Syntastic <]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntax checkers
 let g:syntastic_check_on_open=0 " diable syntax checking on file open to improve vim loading time
 let g:syntastic_enable_signs=1
@@ -74,7 +90,9 @@ let g:syntastic_javascript_eslint_exec = 'eslint_d'
 " install pug-lint from cd using 'npm install -g pug-lint
 let g:syntastic_pug_checkers = ['pug_lint']
 
-" [> UltiSnips <]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       [> UltiSnips <]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
@@ -82,21 +100,27 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 " directory for my own Snippets
 let g:UltiSnipsSnippetDir=$HOME.'/vimfiles/UltiSnips/'
 
-" [> Omni function test >]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       [> Omni function test >]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 " autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 " autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 " autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 " autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
-" [> AutoSave plugin >]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       [> AutoSave plugin >]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " let g:auto_save = 1 " enable autosave
 " let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
 " let g:auto_save_postsave_hook = 'TagsGenerate'  " this will run :TagsGenerate after each save
 "
 
 
-" [> vimtex <]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       [> vimtex <]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if !exists('g:ycm_semantic_triggers')
     let g:ycm_semantic_triggers = {}
 endif
@@ -111,7 +135,26 @@ let g:ycm_semantic_triggers.tex = [
     \ 're!\\includestandalone(\s*\[[^]]*\])?\s*\{[^}]*',
     \ ]
 
-" [> vimtex <]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       [> vimtex <]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:vimtex_view_general_viewer = 'SumatraPDF'
 let g:vimtex_view_general_options = '-reuse-instance -forward-search @tex @line @pdf'
 let g:vimtex_view_general_options_latexmk = '-reuse-instance'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       [> vim-session  <]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" prevent autosave and auto load
+let g:session_autosave = 'no'
+let g:session_autoload = 'no'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       [> NERDTreeTabs <]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Auto open nerd tree on startup
+let g:nerdtree_tabs_open_on_gui_startup = 1
+
+" Focus in the main content windows
+let g:nerdtree_tabs_focus_on_files = 1
+
