@@ -2,3 +2,4 @@
 /plugins/bundle
 *.swp
 undo/
+*.DS_Store
