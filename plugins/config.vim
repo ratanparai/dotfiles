@@ -17,18 +17,44 @@ let g:airline#extensions#tabline#enabled = 1
 "  powerline font
 let g:airline_powerline_fonts=1
 
+" set macvim font to source powerline
+set guifont=Source\ Code\ Pro\ for\ Powerline:h13
+
 " colorscheme
 " let g:solarized_italic=0
 if has('gui_running')
     set background=dark
     colorscheme solarized
 else
+    " fix for terminal color
+    let g:solarized_termcolors=256
+
     set background=dark
-    colorscheme luna
+    colorscheme solarized
 endif
 
 " Highlight trailing whitespace
 let g:solarized_hitrail = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       [> ALELinter <]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" let g:airline_section_error = '%{ALEGetStatusLine()}'
+" let g:ale_statusline_format = ['W %d', '⚠ %d', '⬥ ok']
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       [> EditorConfig <]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" to avoid issues with fugitive
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       [> UltiSnips <]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:UltiSnipsExpandTrigger='<c-j>'
+let g:UltiSnipsJumpForwardTrigger='<c-j>'
+let g:UltiSnipsJumpBackwardTrigger='<c-k>'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                   [> NERDTree <]
@@ -60,101 +86,15 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 " let g:ctrlp_working_path_mode = 'ra'
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                       [> vim-gitgutter <]
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"
-" set updatetime=250
-" let g:gitgutter_highlight_lines = 1
-let g:gitgutter_realtime=0
-let g:gitgutter_eager=0
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                       [> EditorConfig <]
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" to avoid issues with fugitive
-let g:EditorConfig_exclude_patterns = ['fugitive://.*']
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                       [> Syntastic <]
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Syntax checkers
-let g:syntastic_check_on_open=0 " diable syntax checking on file open to improve vim loading time
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_jump = 0 " diable auto jump to error for better autosave integration
-let g:syntastic_vim_checkers = ['vimlint']
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exec = 'eslint_d'
-
-" install pug-lint from cd using 'npm install -g pug-lint
-let g:syntastic_pug_checkers = ['pug_lint']
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                       [> UltiSnips <]
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-
-" directory for my own Snippets
-let g:UltiSnipsSnippetDir=$HOME.'/vimfiles/UltiSnips/'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                       [> Omni function test >]
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-" autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-" autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-" autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-" autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                       [> AutoSave plugin >]
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let g:auto_save = 1 " enable autosave
-" let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
-" let g:auto_save_postsave_hook = 'TagsGenerate'  " this will run :TagsGenerate after each save
-"
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                       [> vimtex <]
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if !exists('g:ycm_semantic_triggers')
-    let g:ycm_semantic_triggers = {}
-endif
-let g:ycm_semantic_triggers.tex = [
-    \ 're!\\[A-Za-z]*cite[A-Za-z]*(\[[^]]*\]){0,2}{[^}]*',
-    \ 're!\\[A-Za-z]*ref({[^}]*|range{([^,{}]*(}{)?))',
-    \ 're!\\hyperref\[[^]]*',
-    \ 're!\\includegraphics\*?(\[[^]]*\]){0,2}{[^}]*',
-    \ 're!\\(include(only)?|input){[^}]*',
-    \ 're!\\\a*(gls|Gls|GLS)(pl)?\a*(\s*\[[^]]*\]){0,2}\s*\{[^}]*',
-    \ 're!\\includepdf(\s*\[[^]]*\])?\s*\{[^}]*',
-    \ 're!\\includestandalone(\s*\[[^]]*\])?\s*\{[^}]*',
-    \ ]
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                       [> vimtex <]
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:vimtex_view_general_viewer = 'SumatraPDF'
-let g:vimtex_view_general_options = '-reuse-instance -forward-search @tex @line @pdf'
-let g:vimtex_view_general_options_latexmk = '-reuse-instance'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                       [> vim-session  <]
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" prevent autosave and auto load
-let g:session_autosave = 'no'
-let g:session_autoload = 'no'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       [> NERDTreeTabs <]
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Auto open nerd tree on startup
-let g:nerdtree_tabs_open_on_gui_startup = 1
+" let g:nerdtree_tabs_open_on_gui_startup = 1
 
 " Focus in the main content windows
 let g:nerdtree_tabs_focus_on_files = 1
 
+" To run NERDTreeTabs on console vim startup
+" let g:nerdtree_tabs_open_on_console_startup=1
